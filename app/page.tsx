@@ -6,6 +6,7 @@ import { ContactForm } from "@/components/ContactForm";
 import { ClassCalendar } from "@/components/ClassCalendar";
 import { GalleryMedia } from "@/components/GalleryMedia";
 import { galleryItems } from "@/data/gallery";
+import { OnboardingPopup } from "@/components/OnboardingPopup";
 
 const tiers = [
   {
@@ -71,6 +72,7 @@ export default function Home() {
   return (
     <>
       <Navigation />
+      <OnboardingPopup />
 
       <header className="hero">
         <div className="hero__bg" aria-hidden>
@@ -121,7 +123,7 @@ export default function Home() {
               <div className="about__visual">
                 <div className="about__image-wrap">
                   <Image
-                    src="/ekay/IMG_86361.jpg"
+                    src="/ekay/IMG_86361.JPG"
                     alt="E.M.A Expert Makeup Academy — professional makeup artistry"
                     fill
                     className="about__image"
@@ -306,7 +308,7 @@ export default function Home() {
                   <p>
                     <strong>Studio Location</strong>
                     <br />
-                    123 Art District, Creative City
+                    East legon, Accra, Ghana
                   </p>
                   <p>
                     <strong>Email</strong>
@@ -316,7 +318,7 @@ export default function Home() {
                   <p>
                     <strong>Phone</strong>
                     <br />
-                    +1 (555) 123-4567
+                    +233 (53) 281-8725
                   </p>
                 </div>
               </div>

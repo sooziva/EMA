@@ -23,13 +23,13 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "1",
     type: "image",
-    src: "/ekay/IMG_9336.JPG",
+    src: "/ekay/DSC02410.JPG",
     label: "In Session",
   },
   {
     id: "2",
     type: "image",
-    src: "/ekay/IMG_8638.JPG",
+    src: "/ekay/DSC02282.JPG",
     label: "Hands-on",
   },
   {
@@ -41,7 +41,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "4",
     type: "video",
-    src: "/IMG_9260.mov",
+    src: "/IMG_9260.mp4",
     label: "Class highlight",
   },
   {
