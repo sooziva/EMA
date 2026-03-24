@@ -489,6 +489,58 @@ h3,
   font-size: 0.6rem;
 }
 
+.about__founder-btn {
+  margin-top: var(--space-md);
+}
+
+/* Founder page */
+.founder-page {
+  min-height: 100vh;
+  background: var(--color-bg);
+}
+
+.founder-hero {
+  padding: calc(var(--space-2xl) + 2rem) 0 var(--space-2xl);
+}
+
+.founder-hero__grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: var(--space-2xl);
+  align-items: center;
+}
+
+.founder-hero__lead {
+  font-size: 1.1rem;
+  color: var(--color-muted);
+  margin-bottom: var(--space-md);
+}
+
+.founder-hero__content p:not(.founder-hero__lead) {
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-md);
+}
+
+.founder-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  margin-top: var(--space-md);
+}
+
+.founder-hero__image-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(26, 24, 22, 0.14);
+}
+
+.founder-hero__image {
+  object-fit: cover;
+}
+
 /* Programs */
 .programs {
   padding: var(--space-2xl) 0;
@@ -1094,6 +1146,19 @@ h3,
   color: var(--color-text);
   margin-bottom: var(--space-md);
   line-height: 1.3;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.payment-card__title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 52px;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--color-accent), var(--color-accent-light));
 }
 
 .payment-card__price {
@@ -1112,6 +1177,33 @@ h3,
 .payment-card__period {
   font-size: 0.85rem;
   color: var(--color-text-muted);
+}
+
+.payment-card__list {
+  list-style: none;
+  margin: 0 0 var(--space-lg);
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.payment-card__list li {
+  position: relative;
+  padding-left: 1.05rem;
+  color: var(--color-text-muted);
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+.payment-card__list li::before {
+  content: "◆";
+  position: absolute;
+  left: 0;
+  top: 0.25rem;
+  font-size: 0.55rem;
+  line-height: 1;
+  color: var(--color-accent);
 }
 
 .payment__note {
@@ -1256,26 +1348,6 @@ h3,
   margin-bottom: var(--space-md);
 }
 
-.footer__brands {
-  display: flex;
-  justify-content: center;
-  gap: var(--space-md);
-  margin-bottom: var(--space-md);
-}
-
-.footer__brand-img {
-  width: 40px;
-  height: 40px;
-  object-fit: contain;
-  opacity: 0.8;
-  transition: opacity 0.2s;
-  filter: brightness(1.1);
-}
-
-.footer__brand-img:hover {
-  opacity: 1;
-}
-
 .footer__links {
   display: flex;
   justify-content: center;
@@ -1291,7 +1363,25 @@ h3,
 }
 
 .footer__links a:hover {
-  color: var(--color-accent-light);
+  color: #ffffff;
+}
+
+.footer__instagram {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.58rem 1.15rem;
+  border-radius: 999px;
+  border: 1px solid rgba(245, 240, 232, 0.4);
+  background: rgba(255, 255, 255, 0.02);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.footer__instagram:hover {
+  border-color: var(--color-accent-light);
+  background: rgba(201, 169, 98, 0.12);
 }
 
 .footer__copy {
@@ -1333,6 +1423,10 @@ h3,
   }
 
   .contact__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .founder-hero__grid {
     grid-template-columns: 1fr;
   }
 }

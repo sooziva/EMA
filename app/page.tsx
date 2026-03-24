@@ -11,59 +11,80 @@ import { OnboardingPopup } from "@/components/OnboardingPopup";
 const tiers = [
   {
     num: "01",
-    title: "Career Defining Classes",
-    desc: "Our flagship programs designed to launch your professional journey. Comprehensive training in bridal, editorial, film, and commercial makeup — with industry-certified instructors and real-world portfolio building.",
+    title: "Full program",
+    desc: "This is for you if you're starting from the beginning or if you've been doing this casually and you're ready to go professional. it's the most comprehensive thing i offer. Artistry. Business. Brand. Client management. Cohort community. The full picture, over several weeks.",
   },
   {
     num: "02",
     title: "Skill Advancement",
-    desc: "Level up with focused masterclasses. Deep dives into color theory, contouring, editorial skin, and specialized techniques. Perfect for working artists who want to refine and expand their skill set.",
+    desc: "This is for you if you're already working but there's a specific thing you want to get better at. Skin. Editorial. Advanced color theory. Business pricing. These masterclasses go deep on one thing so you can move forward faster.",
   },
   {
     num: "03",
     title: "The Experience Program",
-    desc: "Immersion workshops and creative labs. Hands-on experiences, industry days, and collaborative projects that connect you with working professionals and real creative briefs.",
+    desc: "A full-day workshop. Real brief. Real shoot. Real feedback. You walk out with porfolio content and proof of what you can do.",
   },
 ];
 
 const paymentPlans = [
   {
     tier: "01",
-    title: "Career Defining Classes",
+    title: "Full Program",
     price: "2,500",
-    period: "12-week program",
+    period: "Full cohort program",
+    details: [
+      "Complete artistry curriculum",
+      "Business & Brand modules",
+      "Cohort community access",
+      "Industry certification",
+      "1:1 mentorship session with Ekay",
+    ],
   },
   {
     tier: "02",
     title: "Skill Advancement",
     price: "450",
     period: "per masterclass",
+    details: [
+      "Focused single-skill deep dives",
+      "Editorial & advanced techniques",
+      "Open to working MUAs",
+      "Certificate of completion",
+      "EMA community access",
+    ],
   },
   {
     tier: "03",
     title: "The Experience Program",
     price: "350",
     period: "per workshop",
+    details: [
+      "Full-day immersive workshop",
+      "Live shoot & real brief",
+      "Portfolio content produced",
+      "Industry professional feedback",
+      "EMA community access",
+    ],
   },
 ];
 
 const testimonials = [
   {
     quote:
-      '"E.M.A didn\'t just teach me makeup — it taught me how to think like an artist. I\'ve worked on three feature films since graduating."',
-    name: "Alex Rivera",
-    role: "Film & TV Makeup Artist",
+      '"E.M.A didn\'t just teach me makeup — it taught me how to think like an artist. I\'ve worked on buiding a pro portfolio since graduating."',
+    name: "Sandra Osei",
+    role: "Makeup Artist",
   },
   {
     quote:
       '"The instructors are industry professionals who actually care. The portfolio I built at E.M.A got me my first editorial job."',
-    name: "Jordan Chen",
+    name: "Judith Asare",
     role: "Editorial Makeup Artist",
   },
   {
     quote:
-      '"I came in knowing nothing. Six months later I had my own bridal makeup business. The support doesn\'t end at graduation."',
-    name: "Maria Santos",
+      '"What i got from Ekay wasn\'t just technique. it was access to her experience, and a community of women taking this seriously."',
+    name: "Chisom EA",
     role: "Bridal Specialist",
   },
 ];
@@ -138,32 +159,35 @@ export default function Home() {
               </div>
               <div className="about__text">
                 <span className="section-label">About E.M.A</span>
-                <h2 className="section-title">Where Creativity Becomes Career</h2>
+                <h2 className="section-title">Where Talent Gets a Direction</h2>
                 <p className="about__lead">
-                  E.M.A Expert Makeup Academy has trained thousands of artists who
-                  now work across film, fashion, editorial, and bridal industries
-                  worldwide.
+                  E.M.A was built for artists who are serious about the craft but
+                  tired of figuring everything out alone. We teach you the skills and the business behind them.
                 </p>
                 <p>
-                  Our curriculum blends classical techniques with contemporary
-                  trends. From foundational color theory to advanced special
-                  effects, every module is designed by industry veterans who
-                  understand what it takes to succeed.
+                Every artist trained at EMA leaves knowing how to work, how to charge, and how to grow.
+                Not just how to blend.
+                
+                We cover the artistry and the inndustry because talent alone doesn't build a career. 
+                knowing how to run your business does. 
                 </p>
                 <ul className="about__features">
                   <li>
                     <span className="about__feature-icon">◇</span>
-                    Industry-certified instructors
+                    Trained by a working professional, not a classroom theory
                   </li>
                   <li>
                     <span className="about__feature-icon">◇</span>
-                    Hands-on studio training
+                   Real Studio practice on real faces
                   </li>
                   <li>
                     <span className="about__feature-icon">◇</span>
-                    Portfolio & placement support
+                 Business, brand, and portfolio built before you graduate
                   </li>
                 </ul>
+                <Link href="/about-ekay" className="btn btn--primary about__founder-btn">
+                  Know the Founder: Ekay
+                </Link>
               </div>
             </div>
           </ScrollReveal>
@@ -175,7 +199,7 @@ export default function Home() {
           <ScrollReveal delay={0.05}>
             <div className="section-header">
               <span className="section-label">Our Programs</span>
-              <h2 className="section-title">Craft Your Path</h2>
+              <h2 className="section-title">At EMA, there are three ways to learn</h2>
             </div>
           </ScrollReveal>
           <div className="programs__grid programs__grid--tiers">
@@ -274,9 +298,14 @@ export default function Home() {
                   <span className="payment-card__badge">Tier {plan.tier}</span>
                   <h3 className="payment-card__title">{plan.title}</h3>
                   <div className="payment-card__price">
-                    <span className="payment-card__amount">${plan.price}</span>
+                    <span className="payment-card__amount">GHS {plan.price}</span>
                     <span className="payment-card__period">{plan.period}</span>
                   </div>
+                  <ul className="payment-card__list">
+                    {plan.details.map((detail) => (
+                      <li key={detail}>{detail}</li>
+                    ))}
+                  </ul>
                   <Link href="#contact" className="btn btn--primary btn--full">
                     Pay & Enroll
                   </Link>
@@ -337,33 +366,15 @@ export default function Home() {
             <p className="footer__tagline">
               Expert Makeup Academy — Master the Art
             </p>
-            <div className="footer__brands">
-              <Image
-                src="/ekay/brand1.PNG"
-                alt=""
-                width={48}
-                height={48}
-                className="footer__brand-img"
-              />
-              <Image
-                src="/ekay/brand2.PNG"
-                alt=""
-                width={48}
-                height={48}
-                className="footer__brand-img"
-              />
-              <Image
-                src="/ekay/brand3.PNG"
-                alt=""
-                width={48}
-                height={48}
-                className="footer__brand-img"
-              />
-            </div>
             <div className="footer__links">
-              <a href="#">Instagram</a>
-              <a href="#">Facebook</a>
-              <a href="#">YouTube</a>
+              <a
+                href="https://instagram.com/expertmakeup_academy"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="footer__instagram"
+              >
+                Instagram
+              </a>
             </div>
             <p className="footer__copy">
               © {new Date().getFullYear()} E.M.A Expert Makeup Academy. All
