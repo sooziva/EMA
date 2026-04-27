@@ -40,12 +40,25 @@ export function ContactForm() {
       </div>
       <div className="form-group">
         <label htmlFor="program">Program Interest</label>
-          <select id="program" name="program" defaultValue="">
-            <option value="">Select a program</option>
-            <option value="tier1">Tier 1 — Career Defining Classes</option>
-            <option value="tier2">Tier 2 — Skill Advancement</option>
-            <option value="tier3">Tier 3 — The Experience Program</option>
-          </select>
+        <select id="program" name="program" defaultValue="">
+          <option value="">Select an option</option>
+
+          <optgroup label="Tier 01 — Foundation Course (Beginner)">
+            <option value="foundation-1-month">1‑Month Course (GHC 5,500)</option>
+            <option value="foundation-2-week">2‑Week Course (GHC 3,600)</option>
+          </optgroup>
+
+          <optgroup label="Tier 02 — Intermediate to Advanced (Upgrade)">
+            <option value="upgrade-1-day">1‑Day Intensive (GHC 1,500)</option>
+            <option value="upgrade-2-day">2‑Day Intensive (GHC 2,500)</option>
+            <option value="upgrade-1-week">1‑Week Intensive (GHC 3,000)</option>
+          </optgroup>
+
+          <optgroup label="Tier 03 — One‑on‑One with Ekay (Personal)">
+            <option value="1on1-1-day">1‑Day Session (GHC 2,000)</option>
+            <option value="1on1-1-week">1‑Week Programme (GHC 4,500)</option>
+          </optgroup>
+        </select>
       </div>
       <div className="form-group">
         <label htmlFor="message">Message</label>

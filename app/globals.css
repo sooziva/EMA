@@ -1214,9 +1214,292 @@ h3,
   margin: 0 auto;
 }
 
+/* At-a-glance table */
+.glance {
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-xl);
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+  padding: var(--space-lg);
+  box-shadow: 0 16px 36px rgba(26, 24, 22, 0.08);
+}
+
+.glance__top {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-md);
+  margin-bottom: var(--space-md);
+}
+
+.glance__title {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.glance__subtitle {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+
+.glance__tableWrap {
+  overflow-x: auto;
+  border-radius: 12px;
+  border: 1px solid rgba(26, 24, 22, 0.12);
+  background: #fff;
+}
+
+.glance__table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 760px;
+}
+
+.glance__table thead th {
+  background: #0a0a0a;
+  color: #f5f0e8;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.78rem;
+  font-weight: 800;
+  padding: 0.85rem 0.9rem;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.glance__table tbody td {
+  border-top: 1px solid rgba(26, 24, 22, 0.12);
+  padding: 0.85rem 0.9rem;
+  color: #111;
+  font-size: 0.92rem;
+  vertical-align: top;
+}
+
+.glance__pkg {
+  font-weight: 800;
+}
+
+.glance__price {
+  font-family: var(--font-display);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.glance__inst {
+  color: #4a4540;
+}
+
+.glance__foot {
+  margin-top: var(--space-md);
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.glance__foot p {
+  margin: 0.35rem 0;
+}
+
+.glance__quote {
+  font-family: var(--font-display);
+  font-style: italic;
+  color: var(--color-muted);
+}
+
+/* Installment policy */
+.installmentPolicy {
+  margin-top: calc(var(--space-md) * -0.25);
+  margin-bottom: var(--space-xl);
+  padding: var(--space-lg);
+  border-radius: 14px;
+  border: 1px solid rgba(154, 123, 61, 0.28);
+  background: linear-gradient(
+      180deg,
+      rgba(201, 169, 98, 0.18) 0%,
+      rgba(255, 255, 255, 0.9) 100%
+    );
+  box-shadow: 0 16px 36px rgba(26, 24, 22, 0.06);
+}
+
+.installmentPolicy__title {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem;
+  color: var(--color-text);
+}
+
+.installmentPolicy__text {
+  margin: 0;
+  color: var(--color-muted);
+  line-height: 1.7;
+}
+
+/* Payment (tiered flyer layout) */
+.paymentTiers {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-xl);
+}
+
+.tierPay {
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+  padding: var(--space-lg);
+  box-shadow: 0 16px 36px rgba(26, 24, 22, 0.08);
+}
+
+.tierPay__kicker {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: var(--space-sm);
+}
+
+.tierPay__title {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin: 0 0 0.35rem;
+  color: var(--color-text);
+}
+
+.tierPay__subtitle {
+  margin: 0 0 var(--space-md);
+  color: var(--color-text-muted);
+  font-style: italic;
+}
+
+.tierPay__desc {
+  color: var(--color-muted);
+  margin: 0 0 var(--space-lg);
+  line-height: 1.75;
+}
+
+.tierPay__table {
+  border: 1px solid rgba(26, 24, 22, 0.12);
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.tierPay__tr {
+  display: grid;
+  grid-template-columns: 1.35fr 0.55fr 1.1fr;
+}
+
+.tierPay__tr--head {
+  background: #0a0a0a;
+  color: #f5f0e8;
+}
+
+.tierPay__th,
+.tierPay__td {
+  padding: 0.9rem 0.95rem;
+  border-bottom: 1px solid rgba(26, 24, 22, 0.1);
+}
+
+.tierPay__tr--head .tierPay__th {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.tierPay__tbody .tierPay__tr:last-child .tierPay__td {
+  border-bottom: none;
+}
+
+.tierPay__pkgName {
+  font-weight: 800;
+  color: #111;
+}
+
+.tierPay__pkgMeta {
+  margin-top: 0.25rem;
+  font-size: 0.85rem;
+  color: #5f5a55;
+}
+
+.tierPay__td--price {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: #111;
+  white-space: nowrap;
+}
+
+.tierPay__instLabel {
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #111;
+  opacity: 0.7;
+}
+
+.tierPay__inst {
+  margin-top: 0.25rem;
+  color: #4a4540;
+  font-size: 0.92rem;
+  line-height: 1.45;
+}
+
+.tierPay__notes {
+  margin: var(--space-md) 0 0;
+  padding-left: 1.1rem;
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.tierPay__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  margin-top: var(--space-lg);
+}
+
 @media (max-width: 1024px) {
   .payment__grid {
     grid-template-columns: 1fr;
+  }
+
+  .tierPay__tr {
+    grid-template-columns: 1fr;
+  }
+
+  .tierPay__tr--head {
+    display: none;
+  }
+
+  .tierPay__td {
+    border-bottom: none;
+    padding: 0.8rem 0.95rem;
+  }
+
+  .tierPay__tbody .tierPay__tr {
+    border-bottom: 1px solid rgba(26, 24, 22, 0.12);
+  }
+
+  .tierPay__tbody .tierPay__tr:last-child {
+    border-bottom: none;
+  }
+
+  .tierPay__td--price {
+    padding-top: 0;
   }
 }
 

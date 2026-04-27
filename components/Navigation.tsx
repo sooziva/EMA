@@ -35,8 +35,8 @@ export function Navigation() {
           </Link>
         </li>
         <li>
-          <Link href="#programs" onClick={close}>
-            Programs
+          <Link href="#payment" onClick={close}>
+            Enrollment
           </Link>
         </li>
         <li>
@@ -52,11 +52,6 @@ export function Navigation() {
         <li>
           <Link href="#testimonials" onClick={close}>
             Alumni
-          </Link>
-        </li>
-        <li>
-          <Link href="#payment" onClick={close}>
-            Payment
           </Link>
         </li>
         <li>
